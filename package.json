@@ -1,5 +1,10 @@
 {
-  "name": "foobar",
+  "name": "@linken123bytedance/foobar",
+  "author": "linken123bytedance",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linken123bytedance/foobar.git"
+  },
   "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.js",
