@@ -5,12 +5,16 @@
     "type": "git",
     "url": "git+https://github.com/linken123bytedance/foobar.git"
   },
-  "version": "1.0.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "version": "0.0.4",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./src/index.ts",
   "scripts": {
-    "build": "tsup src/index.ts --format esm"
+    "build": "tsup src/index.ts --format esm",
+    "publish": "npm build && npm publish"
   },
   "devDependencies": {
     "@types/node": "^22.13.1",

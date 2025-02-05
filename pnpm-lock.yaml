@@ -342,6 +342,9 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
+  '@linken123bytedance/foobar@0.0.4':
+    resolution: {integrity: sha512-W5paCR1iAQMPok65C6FICjNHy1Fj8nuPOJ0UAYhh+d7nsN7bTQZeI89nBnJansfdC+EYI89OjUr0SE4WKS/urA==, tarball: https://npm.pkg.github.com/download/@linken123bytedance/foobar/0.0.4/8ba5c35eac7da5eadb6d0d651032fc952311db37}
+
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
@@ -967,6 +970,8 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
+
+  '@linken123bytedance/foobar@0.0.4': {}
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
