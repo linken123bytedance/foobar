@@ -1,1 +1,1 @@
-export const foobar = "foobar";
+export * from "./components/App.tsx";
