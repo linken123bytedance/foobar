@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+[data-theme="dark"] {
+  --ladle-bg-color-primary: #141414;
+  --ladle-bg-color-secondary: #1f1f1f;
+  --ladle-color-primary: #f0f0f0cc;
+  --ladle-color-secondary: #d3d3d3cc;
+  --ladle-color-hover: #f2f2f2e6;
+  --ladle-color-accent: #ff3b5c;
+  --ladle-blueprint: #242424;
+}
+
+* {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-corner,
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-xs;
+    @apply bg-[--alpha(var(--ladle-color-secondary)/20%)];
+    &:hover {
+      @apply bg-[--alpha(var(--ladle-color-secondary)/40%)];
+    }
+  }
+}
+
+header.ladle-addons[role="banner"] {
+  @apply m-0 w-full box-border bottom-0;
+  @apply flex flex-row justify-center items-center;
+
+  ul {
+    @apply relative;
+    @apply w-fit h-fit px-1 py-1 mb-6;
+    @apply rounded-2xl text-sm;
+    @apply ring ring-neutral-600/40;
+    @apply bg-[var(--ladle-bg-color-secondary)];
+
+    li {
+      @apply m-0 bg-transparent shadow-none;
+      @apply rounded-[inherit];
+
+      button {
+        @apply p-2 rounded-xl;
+
+        &:hover {
+          @apply bg-[--alpha(var(--ladle-color-accent)/20%)];
+        }
+        &.source-active {
+          @apply bg-[var(--ladle-bg-color-primary)];
+        }
+
+        .ladle-badge {
+          @apply top-[0.25em] ml-[3em];
+        }
+      }
+    }
+  }
+
+  span.ladle-addon-tooltip {
+    @apply m-0 -top-[8px] left-1/2 -translate-x-1/2 -translate-y-full px-2 py-1.5;
+    @apply rounded-lg text-sm;
+    @apply ring ring-neutral-600/40;
+  }
+}
+
+div[data-reach-dialog-overlay] {
+  & > div[role="dialog"] {
+    @apply m-0 bottom-[76px] left-1/2 -translate-x-1/2;
+    @apply ring ring-neutral-600/40 shadow-md;
+    @apply rounded-2xl px-8 py-6;
+
+    min-width: 320px;
+    max-width: min(80vw, 1024px) !important;
+    width: fit-content !important;
+
+    button[aria-label="Close modal"] {
+      @apply ring ring-neutral-600/40 shadow-md;
+      @apply rounded-2xl;
+      @apply my-2 mr-4 flex justify-center items-center;
+      &:hover {
+        @apply bg-[--alpha(var(--ladle-color-primary)/8%)];
+        color: inherit !important;
+      }
+    }
+  }
+}
+
+div.ladle-addon-modal-body {
+  pre.prism-code {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    width: 1024px;
+  }
+}
