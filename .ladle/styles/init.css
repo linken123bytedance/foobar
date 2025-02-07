@@ -1,0 +1,30 @@
+[data-theme="dark"] {
+  --ladle-bg-color-primary: #141414;
+  --ladle-bg-color-secondary: #1f1f1f;
+  --ladle-color-primary: #f0f0f0cc;
+  --ladle-color-secondary: #d3d3d3cc;
+  --ladle-color-hover: #f2f2f2e6;
+  --ladle-color-accent: #ff3b5c;
+  --ladle-blueprint: #242424;
+}
+
+* {
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+  ::-webkit-scrollbar-corner,
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-xs;
+    @apply bg-[--alpha(var(--ladle-color-secondary)/20%)];
+    &:hover {
+      @apply bg-[--alpha(var(--ladle-color-secondary)/40%)];
+    }
+  }
+}
+
+#ladle-root {
+  @apply md:flex-row-reverse;
+}

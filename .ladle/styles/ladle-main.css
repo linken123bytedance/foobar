@@ -1,0 +1,44 @@
+main.ladle-main {
+  @apply p-0;
+
+  /* wrapper */
+  .ladle-main-wrapper {
+    @apply max-w-[1024px];
+    @apply mx-auto;
+  }
+
+  /* heading */
+  h1 {
+    @apply mt-8;
+    @apply text-8xl;
+  }
+  h2 {
+    @apply mt-4;
+    @apply text-6xl;
+  }
+  h3 {
+    @apply mt-4;
+    @apply text-4xl;
+  }
+  h4 {
+    @apply mt-4;
+    @apply text-2xl;
+  }
+  h5 {
+    @apply mt-4;
+    @apply text-xl;
+  }
+
+  code {
+    /*@apply text-[var(--ladle-color-accent)];*/
+    /*@apply bg-[--alpha(var(--ladle-color-accent)/20%)];*/
+    @apply bg-neutral-500/80;
+    @apply rounded-md px-1.5 py-0.5;
+    @apply text-sm;
+  }
+
+  blockquote {
+    @apply px-4 py-4 rounded-e-xl my-4;
+    @apply bg-[--alpha(var(--ladle-color-primary)/16%)];
+  }
+}

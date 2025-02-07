@@ -1,1 +1,1 @@
-export * from "./components/App.tsx";
+export * from "./components/Button.tsx";

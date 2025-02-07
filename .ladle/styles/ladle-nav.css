@@ -1,0 +1,59 @@
+nav[role="navigation"].ladle-aside,
+.ladle-resize-handle {
+  @apply bg-[var(--ladle-bg-color-primary)];
+}
+
+nav[role="navigation"].ladle-aside {
+  @apply pl-6 pr-2;
+
+  & > input[aria-label="Search stories"] {
+    @apply px-2 py-1.5 mb-2;
+    @apply rounded-lg text-sm;
+    @apply ring ring-neutral-600/40;
+
+    border-bottom: none;
+    color: inherit !important;
+
+    &:hover,
+    &:focus {
+      @apply bg-[var(--ladle-bg-color-primary)];
+    }
+    &:focus {
+      @apply ring ring-[--alpha(var(--ladle-color-accent)/60%)];
+    }
+  }
+
+  & > ul[role="tree"] {
+    @apply text-sm text-neutral-200/70;
+
+    li {
+      @apply m-0! rounded-lg;
+
+      &.ladle-active {
+        @apply text-[var(--ladle-color-accent)];
+        @apply bg-[--alpha(var(--ladle-color-accent)/20%)];
+      }
+
+      /* title */
+      & > div:first-child {
+        @apply px-2 py-1.5;
+        @apply gap-1 text-inherit;
+        /* icon */
+        & > div:first-child {
+          @apply ms-1! me-1! flex justify-center items-center;
+        }
+        a {
+          @apply text-inherit;
+        }
+      }
+      &:not(.ladle-active) > div:first-child:hover {
+        @apply text-neutral-100/80;
+      }
+    }
+
+    &,
+    ul[role="group"] {
+      @apply flex flex-col items-stretch ml-6;
+    }
+  }
+}
