@@ -3,17 +3,20 @@ import "./styles/index.css";
 import { ArgTypes, SourceHeader, Story, useLadleContext } from "@ladle/react";
 
 import type { GlobalProvider } from "@ladle/react";
+import { ThemeProvider } from "./ThemeProvider.tsx";
 
 export const Provider: GlobalProvider = ({
   children,
   globalState,
   storyMeta,
 }) => (
-  <div className="ladle-main-wrapper">
-    {/*<h1>Theme: {globalState.theme}</h1>*/}
-    {/*{storyMeta && <h2>{storyMeta.customValue}</h2>}*/}
-    {children}
-  </div>
+  <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <div className="ladle-main-wrapper">
+      {/*<h1>Theme: {globalState.theme}</h1>*/}
+      {/*{storyMeta && <h2>{storyMeta.customValue}</h2>}*/}
+      {children}
+    </div>
+  </ThemeProvider>
 );
 
 export const StorySourceHeader: SourceHeader = ({ path }) => {

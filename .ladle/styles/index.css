@@ -1,4 +1,5 @@
-@import "tailwindcss";
+/*@import "tailwindcss";*/
+@import "../../src/index.css";
 
 @import "./init.css";
 @import "./ladle-banner.css";
