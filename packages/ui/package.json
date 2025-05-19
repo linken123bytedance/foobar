@@ -1,0 +1,39 @@
+{
+  "name": "ui",
+  "type": "module",
+  "exports": {
+    ".": {
+      "bun": "./src/index.ts",
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    },
+    "./utils/*": {
+      "bun": "./src/utils/*",
+      "types": "./src/utils/*",
+      "import": "./src/utils/*",
+      "require": "./src/utils/*"
+    },
+    "./icons": {
+      "bun": "./src/icons/index.ts",
+      "types": "./src/icons/index.ts",
+      "import": "./src/icons/index.ts",
+      "require": "./src/icons/index.ts"
+    }
+  },
+  "files": [
+    "package.json",
+    "src",
+    "!src/**/*.test.ts"
+  ],
+  "dependencies": {
+    "@floating-ui/react": "^0.27.16"
+  },
+  "peerDependencies": {
+    "bun-plugin-tailwind": "catalog:",
+    "clsx": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tailwindcss": "catalog:"
+  }
+}

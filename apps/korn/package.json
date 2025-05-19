@@ -1,0 +1,19 @@
+{
+  "name": "korn",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "bun run server.ts"
+  },
+  "dependencies": {
+    "clsx": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "ui": "catalog:",
+    "valtio": "catalog:"
+  },
+  "devDependencies": {
+    "bun-plugin-tailwind": "catalog:",
+    "tailwindcss": "catalog:"
+  }
+}

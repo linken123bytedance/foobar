@@ -1,0 +1,13 @@
+{
+  "name": "utils",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": "./index.ts",
+    "./tsconfig.common.json": "./tsconfig.common.json",
+    "./tsconfig.bun.json": "./tsconfig.bun.json",
+    "./tsconfig.browser.json": "./tsconfig.browser.json",
+    "./*": "./*.ts"
+  }
+}
